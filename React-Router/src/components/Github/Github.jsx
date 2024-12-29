@@ -13,7 +13,15 @@ function Github() {
   return (
     <>
         <div className='bg-gray-600 text-center text-2xl font-medium p-2 text-slate-200'>Github Owner : {data.name}</div>
-        <img src={data.avatar_url} alt="" width={300} height={400} />
+        <div className='grid md:grid-cols-2 gap-4 p-4 bg-slate-200 items-center justify-items-center w-3/4 mx-auto'>
+          <img src={data.avatar_url} alt="" width={300} height={400} />
+          <div className='flex flex-col justify-center gap-4'>
+            <div className='text-xl font-semibold'>Github login : {data.login}</div>
+            <div className='text-xl font-semibold'>Github url : {data.html_url}</div>
+            <div className='text-xl font-semibold'>Github Followers : {data.followers}</div>
+            <div className='text-xl font-semibold'>Github Following : {data.following}</div>
+        </div>
+      </div>
     </>
   )
 }
